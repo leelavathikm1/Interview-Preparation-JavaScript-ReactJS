@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function rotateArrayRight(arr, positions) {
+        const length = arr.length;
+        if (length === 0) {
+          return arr;
+        }
+
+        // Calculate the actual number of positions to rotate
+        const rotateBy = positions % length;
+
+        // Slice the array into two parts and recombine them in the rotated order
+        const rotatedArray = [
+          ...arr.slice(-rotateBy),
+          ...arr.slice(0, length - rotateBy),
+        ];
+
+        return rotatedArray;
+      }
+
+      // Sample array
+      var originalArray = [1, 2, 3, 4, 5, 6];
+
+      // Specify the number of positions to rotate
+      var positionsToRotate = 2;
+
+      // Call the function to rotate the array
+      var rotatedResult = rotateArrayRight(originalArray, positionsToRotate);
+
+      // Display the rotated array
+      console.log(rotatedResult);
+    </script>
+  </body>
+</html>

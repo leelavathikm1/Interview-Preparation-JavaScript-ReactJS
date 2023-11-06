@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Assign-1
+      var favaoriteColors = ["Blue", "Green", "Red", "Orange", "Pink"];
+      console.log("My Favorite Color is " + favaoriteColors[0]);
+
+      // Assign-2
+      var myArray = ["Apple", "Banana", "Cherry", "Dates", "Fig"];
+
+      var firstElement = myArray[0];
+      console.log("The First element Is :" + firstElement);
+
+      var lastElement = myArray[myArray.length - 1];
+      console.log("The Last Element Is :" + lastElement);
+
+      myArray.push("Guva");
+      myArray.shift();
+      console.log(myArray);
+
+      for (i = 0; i <= myArray.length; i++) {
+        document.write(myArray[i] + "<br>");
+      }
+
+      var arrayLength = myArray.length;
+      console.log(arrayLength);
+
+      //   Sum of an array
+      var numbers = [5, 6, 7, 8];
+      var sum = 0;
+
+      for (i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+      }
+      console.log("the sum of array is" + sum);
+    </script>
+  </body>
+</html>

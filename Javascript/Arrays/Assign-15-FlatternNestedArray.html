@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var nestedArray = [
+        [1, 2],
+        [3, 4],
+        [5, 6],
+      ];
+
+      var flatternedArray = nestedArray.reduce(function (
+        accumulator,
+        currentArray
+      ) {
+        return accumulator.concat(currentArray);
+      },
+      []);
+      console.log("Flattened array : " + flatternedArray);
+    </script>
+  </body>
+</html>

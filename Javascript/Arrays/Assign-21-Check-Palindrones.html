@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Sample array of words
+      var wordsArray = ["racecar", "hello", "level", "world", "madam"];
+
+      // Function to check if a word is a palindrome
+      function isPalindrome(word) {
+        // Convert the word to lowercase to make it case-insensitive
+        word = word.toLowerCase();
+        // Reverse the word and compare it with the original word
+        return word === word.split("").reverse().join("");
+      }
+
+      // Use the filter method to find palindromic words
+      var palindromicWords = wordsArray.filter(isPalindrome);
+
+      // Display the palindromic words
+      console.log("Palindromic words: " + palindromicWords.join(", "));
+    </script>
+  </body>
+</html>

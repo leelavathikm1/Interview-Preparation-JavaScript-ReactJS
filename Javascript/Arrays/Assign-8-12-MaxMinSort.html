@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Finding Min&Max Numbers
+      var numbers = [10, 45, 76, 3, 8, 9, 25, 90];
+
+      var max = Math.max(...numbers);
+      var min = Math.min(...numbers);
+      console.log("Max Numbers is :" + max);
+      console.log("Min numbers is : " + min);
+
+      //   Sort & Reverse An Array
+      var colors = [
+        "Blue",
+        "Green",
+        "White",
+        "Orange",
+        "Red",
+        "Purple",
+        "Brown",
+      ];
+
+      colors.sort();
+      colors.reverse();
+
+      console.log("Sorted Colors are : " + colors);
+      //   Copied colors array
+
+      var copiedColors = [...colors];
+      console.log("Copied Colors : " + copiedColors);
+
+      //Concatenate an arrays
+
+      var FavoriteColors = ["Black", "Gray", "DarkBlue"];
+      var concateColors = colors.concat(FavoriteColors);
+
+      console.log("Combined colors " + concateColors);
+    </script>
+  </body>
+</html>

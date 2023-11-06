@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var myColors = ["Red", "Blue", "Green", "Creeam"];
+
+      var colorToCheck = "Red";
+
+      var foundColor = myColors.find(function (color) {
+        return color === colorToCheck;
+      });
+      if (foundColor) {
+        console.log(colorToCheck + "  is Included in favorite color");
+      } else {
+        console.log(colorToCheck + "is not included ");
+      }
+    </script>
+  </body>
+</html>
