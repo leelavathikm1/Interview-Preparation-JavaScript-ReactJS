@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function convertTemprature(temprature, fromUnit, toUnit) {
+        if (fromUnit === "C" && "F") {
+          return (temprature * 9) / 5 + 32;
+        } else if (fromUnit === "F" && toUnit === "C") {
+          return ((temprature - 32) * 5) / 9;
+        } else {
+          return "Invalid Conversion";
+        }
+      }
+      const temprature = parseFloat(prompt("Enter the temprature"));
+      const fromUnit = prompt("Enter 'C' for Celsius or 'F' for Fahrenheit:");
+      const toUnit = prompt("Enter 'C' for Celsius or 'F' for Fahrenheit:");
+
+      const convertedTemprature = convertTemprature(
+        temprature,
+        fromUnit,
+        toUnit
+      );
+
+      if (typeof convertedTemprature === "number") {
+        console.log("Converted Temprature" + convertedTemprature);
+      } else {
+        console.log(convertedTemprature);
+      }
+    </script>
+  </body>
+</html>

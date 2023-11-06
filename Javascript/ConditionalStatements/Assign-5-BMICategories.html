@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function calculateBMI(weight, height) {
+        return weight / (height * height);
+      }
+      function categorizeBMI(bmi) {
+        if (bmi < 18.5) {
+          return console.log("UnderWeight");
+        }
+        if (bmi < 24.9) {
+          return;
+          console.log("Normal");
+        }
+        if (bmi < 29.9) {
+          return console.log("OverWeight");
+        }
+        return console.log("Obase");
+      }
+
+      var weight = 70;
+      var height = 1.65;
+
+      var bmi = calculateBMI(weight, height);
+      var category = categorizeBMI(bmi);
+
+      console.log("BMI " + bmi.toFixed(2));
+      console.log("Category" + category);
+    </script>
+
+    <!-- The toFixed method in JavaScript is used to format a number with a fixed number of digits 
+        after the decimal point. It takes one argument, which is the number of decimal places you want to keep.
+         When you apply toFixed to a number,
+         it returns a string representation of the number with the specified number of decimal places. -->
+  </body>
+</html>

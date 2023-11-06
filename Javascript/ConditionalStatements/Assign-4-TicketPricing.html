@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function calculateTicketPrice(age, student) {
+        if (student) {
+          return 8;
+          console.log("Student Ticket Price");
+        } else if (age < 12) {
+          return 6;
+          console.log("Child Ticket Price");
+        } else if (age < 65) {
+          return 10;
+          console.log("Adult Ticket Price");
+        } else {
+          return 7;
+          console.log("Senior Ticket Price");
+        }
+      }
+
+      var age = 66;
+      var student = false;
+
+      var ticketPrice = calculateTicketPrice(age, student);
+      console.log("the Ticket Price is " + ticketPrice + ".Rupees");
+    </script>
+  </body>
+</html>

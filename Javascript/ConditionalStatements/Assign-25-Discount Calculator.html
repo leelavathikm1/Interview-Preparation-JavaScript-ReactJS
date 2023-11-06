@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function calculateFinalPrice(initialPrice, purchaseAmount) {
+        const discountThreshold = 100; // Purchase amount above which a discount is applied
+        const discountRate = 0.1; // 10% discount rate
+
+        if (purchaseAmount >= discountThreshold) {
+          // Apply the discount if the purchase amount is equal to or greater than the threshold
+          const discountAmount = initialPrice * discountRate;
+          return initialPrice - discountAmount;
+        } else {
+          return initialPrice; // No discount applied
+        }
+      }
+
+      const initialPrice = 50; // Change this to the original price of the item
+      const purchaseAmount = 120; // Change this to the purchase amount
+
+      const finalPrice = calculateFinalPrice(initialPrice, purchaseAmount);
+      console.log(`The final price is $${finalPrice.toFixed(2)}`);
+    </script>
+  </body>
+</html>

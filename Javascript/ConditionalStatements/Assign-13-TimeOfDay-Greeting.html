@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var now = new Date();
+      var currentHour = now.getHours();
+
+      var greeting;
+
+      if (currentHour >= 5 && currentHour < 12) {
+        greeting = "Good Morning";
+      } else if (currentHour >= 12 && currentHour < 18) {
+        greeting = "Good Afternoon";
+      } else {
+        console.log("Good Knight");
+      }
+
+      console.log("Hello " + greeting);
+    </script>
+  </body>
+</html>

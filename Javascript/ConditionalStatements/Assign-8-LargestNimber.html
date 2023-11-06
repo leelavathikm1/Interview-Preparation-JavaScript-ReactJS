@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function findLargestNumber(num1, num2, num3) {
+        var largest = num1;
+
+        if (num2 > largest) {
+          largest = num2;
+        }
+
+        if (num3 > largest) {
+          largest = num3;
+        }
+        return largest;
+      }
+
+      var number1 = 10;
+      var number2 = 40;
+      var number3 = 9;
+
+      var largestNumber = findLargestNumber(number1, number2, number3);
+      console.log("the largest number is : " + largestNumber);
+    </script>
+  </body>
+</html>

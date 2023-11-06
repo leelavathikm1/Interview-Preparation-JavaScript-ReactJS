@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getQuadrant(x, y) {
+        if (x === 0 || y === 0) {
+          return "On an axis";
+        } else if (x > 0 && y > 0) {
+          return "Quadrant I";
+        } else if (x < 0 && y < 0) {
+          return "Quadrant II";
+        } else if (x < 0 && y < 0) {
+          return "Quadrant III ";
+        } else if (x > 0 && y < 0) {
+          return "Quadrant IV";
+        }
+      }
+      var x = parseInt(prompt("Enter the x-coordinate"));
+      var y = parseInt(prompt("enter the y-coordinate"));
+
+      var quadrant = getQuadrant(x, y);
+
+      console.log("The point is in " + quadrant);
+    </script>
+  </body>
+</html>

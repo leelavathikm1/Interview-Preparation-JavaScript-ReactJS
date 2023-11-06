@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function calculate(num1, operator, num2) {
+        if (operator === "+") {
+          return num1 + num2;
+        } else if (operator === "-") {
+          return num1 - num2;
+        } else if (operator === "*") {
+          return num1 * num2;
+        } else if (operator === "/") {
+          if (num2 === 0) {
+            return "Error Division by zero";
+          }
+          return num1 / num2;
+        } else {
+          return "Invalid Operator";
+        }
+      }
+
+      var number1 = 20;
+      var operator = "+";
+      var number2 = 5;
+
+      var result = calculate(number1, operator, number2);
+
+      if (typeof result === "number") {
+        console.log("Result : " + result);
+      } else {
+        console.log(result);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function calculateLetterGrade(grade) {
+        if (grade >= 90) {
+          return "A";
+        } else if (grade >= 80) {
+          return "B";
+        } else if (grade >= 70) {
+          return "C";
+        } else if (grade >= 60) {
+          return "D";
+        } else {
+          return "F";
+        }
+      }
+
+      // Example usage:
+      const numericalGrade = 85;
+      const letterGrade = calculateLetterGrade(numericalGrade);
+      console.log(`Numerical Grade: ${numericalGrade}`);
+      console.log(`Letter Grade: ${letterGrade}`);
+    </script>
+  </body>
+</html>

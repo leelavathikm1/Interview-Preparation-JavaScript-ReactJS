@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isPalindrome(str) {
+        // Remove non-alphanumeric characters and convert to lowercase
+        const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+
+        // Reverse the cleaned string and compare it with the original
+        const reversedStr = cleanedStr.split("").reverse().join("");
+
+        return cleanedStr === reversedStr;
+      }
+
+      const input = prompt("Enter a word or phrase:");
+      if (isPalindrome(input)) {
+        console.log(`"${input}" is a palindrome.`);
+      } else {
+        console.log(`"${input}" is not a palindrome.`);
+      }
+    </script>
+  </body>
+</html>

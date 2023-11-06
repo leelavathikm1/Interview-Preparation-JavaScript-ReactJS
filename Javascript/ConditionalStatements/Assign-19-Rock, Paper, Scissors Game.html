@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function computerChoice() {
+        const choices = ["rock", "paper", "Scissors"];
+        const randomIndex = Math.floor(Math.random() * 3);
+        return choices[randomIndex];
+      }
+
+      function playGame(userChoice) {
+        var computer = computerChoice();
+
+        if (userChoice === computer) {
+          return "It is a tie";
+        } else if (
+          (userChoice === "rock" && computer === "scisssors") ||
+          (userChoice === "paper" && computer === "rock") ||
+          (userChoice === "scissors" && computer === "paper")
+        ) {
+          return "You win";
+        } else {
+          return "Computer wins";
+        }
+      }
+
+      var userChoice = prompt("enter your choice");
+      if (
+        userChoice !== "rock" &&
+        userChoice !== "paper" &&
+        userChoice !== "scissors"
+      ) {
+        console.log("Invalid Choice");
+      } else {
+        var result = playGame(userChoice);
+        console.log("you choose" + result);
+      }
+    </script>
+  </body>
+</html>

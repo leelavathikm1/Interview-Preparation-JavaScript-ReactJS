@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function setAlarm(alarmTime, message) {
+        var now = new Date();
+        const alarm = new Date(now.toDateString() + "" + alarmTime);
+
+        const timeUntilAlarm = alarm - now;
+
+        if (timeUntilAlarm <= 0) {
+          console.log("Invalid alarm time");
+        } else {
+          setTimeout(function () {
+            console.log(message);
+          }, timeUntilAlarm);
+        }
+      }
+
+      var alarmTime = prompt("Set the alarm");
+      var alarmMessage = prompt("enter the alarm message");
+
+      setAlarm(alarmTime, alarmMessage);
+    </script>
+  </body>
+</html>

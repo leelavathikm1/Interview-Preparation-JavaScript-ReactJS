@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isPrime(number) {
+        if (number <= 1) {
+          return false;
+        }
+        if (number <= 3) {
+          return true;
+        }
+
+        if (number % 2 === 0 || number % 3 === 0) {
+          return false;
+        }
+        for (i = 5; i <= number; i += 6) {
+          if (number % i === 0 || number % (i + 2) === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      var inputNumner = parseInt(prompt("Enter A Number"));
+
+      if (!isNaN(inputNumner)) {
+        var result = isPrime(inputNumner);
+
+        if (result) {
+          console.log("Is not a number " + inputNumner);
+        } else {
+          console.log("Is not a prime number" + inputNumner);
+        }
+      } else {
+        console.log("Invalid Input");
+      }
+    </script>
+  </body>
+</html>

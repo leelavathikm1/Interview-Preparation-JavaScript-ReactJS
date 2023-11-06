@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function leapYear(year) {
+        return (year & (4 === 0) && year % 100 !== 0) || year % 400 === 0;
+      }
+
+      function leapDay(date) {
+        var today = new Date(date);
+        var month = today.getMonth();
+        var day = today.getDate();
+
+        return month === 1 && day === 29;
+      }
+
+      var currentDate = new Date();
+      var currentDateLeapDay = leapDay(currentDate);
+      var currentYear = currentDate.getFullYear();
+    </script>
+  </body>
+</html>

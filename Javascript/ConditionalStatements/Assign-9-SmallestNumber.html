@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function findSmallestNumber(num1, num2, num3) {
+        var smallest = num1;
+
+        if (num2 < smallest) {
+          smallest = num2;
+        }
+        if (num3 < smallest) {
+          smallest = num3;
+        }
+        return smallest;
+      }
+
+      var number1 = 67;
+      var number2 = 34;
+      var number3 = 8;
+
+      var smallestNumber = findSmallestNumber(number1, number2, number3);
+      console.log("Smallest Number Is : " + smallestNumber);
+    </script>
+  </body>
+</html>
