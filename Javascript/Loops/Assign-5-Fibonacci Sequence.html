@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function generateFibonacci(n) {
+        let fibonacciSequence = [0, 1];
+
+        for (let i = 2; i < n; i++) {
+          let nextFibonacci =
+            fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
+          fibonacciSequence.push(nextFibonacci);
+        }
+
+        return fibonacciSequence;
+      }
+
+      const n = 10; // The number of Fibonacci numbers to generate
+      const fibonacciNumbers = generateFibonacci(n);
+
+      console.log("The first 10 numbers in the Fibonacci sequence:");
+      console.log(fibonacciNumbers.join(", "));
+    </script>
+  </body>
+</html>

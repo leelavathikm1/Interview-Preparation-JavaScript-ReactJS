@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Function to find and display prime factors of a number
+      function primeFactors(n) {
+        let factors = [];
+
+        // Find and display all 2s that divide the number
+        while (n % 2 === 0) {
+          factors.push(2);
+          n /= 2;
+        }
+
+        // Now n must be odd. We can skip even numbers and check only odd divisors.
+        for (let i = 3; i <= Math.sqrt(n); i += 2) {
+          while (n % i === 0) {
+            factors.push(i);
+            n /= i;
+          }
+        }
+
+        // If n is a prime greater than 2, add it to the factors array
+        if (n > 2) {
+          factors.push(n);
+        }
+
+        return factors;
+      }
+
+      // Input the number from the user
+      const number = parseInt(prompt("Enter a number:"));
+
+      // Check if the input is a positive integer
+      if (!isNaN(number) && number > 1) {
+        const factors = primeFactors(number);
+        console.log(`Prime factors of ${number} are: ${factors.join(", ")}`);
+      } else {
+        console.log("Please enter a valid positive integer greater than 1.");
+      }
+    </script>
+  </body>
+</html>

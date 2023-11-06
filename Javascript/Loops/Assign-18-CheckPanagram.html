@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Function to check if a sentence is a pangram
+      function isPangram(sentence) {
+        // Define an object to track the occurrence of each letter in the alphabet
+        const alphabetCount = {};
+
+        // Remove non-alphabetic characters and convert to lowercase
+        sentence = sentence.toLowerCase().replace(/[^a-z]/g, "");
+
+        // Loop through the sentence and update the alphabetCount object
+        for (const letter of sentence) {
+          alphabetCount[letter] = true;
+        }
+
+        // Check if all letters of the alphabet are present
+        for (
+          let letter = "a";
+          letter <= "z";
+          letter = String.fromCharCode(letter.charCodeAt(0) + 1)
+        ) {
+          if (!alphabetCount[letter]) {
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      // Input the sentence from the user
+      const sentence = prompt("Enter a sentence to check if it's a pangram:");
+
+      if (isPangram(sentence)) {
+        console.log("The sentence is a pangram.");
+      } else {
+        console.log("The sentence is not a pangram.");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function printPyramid(rows) {
+      //     for (i = 1; i <= rows; i++) {
+      //       var row = "".repeat(rows - i);
+      //       row += "*".repeat(2 * i - 1);
+      //       console.log(row);
+      //     }
+      //   }
+
+      //   var rows = parseInt(prompt("Enter the number of rows for the pyramid"));
+
+      //   if (!isNaN(rows) && rows > 0) {
+      //     printPyramid(rows);
+      //   } else {
+      //     console.log("Please enter a valid positive number for the rows .");
+      //   }
+
+      // Function to print a pyramid pattern
+      function printPyramid(rows) {
+        for (let i = 1; i <= rows; i++) {
+          let row = " ".repeat(rows - i); // Spaces before the asterisks
+          row += "*".repeat(2 * i - 1); // Asterisks
+          console.log(row);
+        }
+      }
+
+      // Get the number of rows from the user
+      const rows = parseInt(
+        prompt("Enter the number of rows for the pyramid:")
+      );
+
+      // Check if the input is a positive integer
+      if (!isNaN(rows) && rows > 0) {
+        printPyramid(rows);
+      } else {
+        console.log("Please enter a valid positive number for the rows.");
+      }
+    </script>
+  </body>
+</html>

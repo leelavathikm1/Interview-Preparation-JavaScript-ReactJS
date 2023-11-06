@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Function to check if a word is a palindrome
+      function isPalindrome(word) {
+        word = word.toLowerCase(); // Convert to lowercase for case-insensitivity
+        const reversedWord = word.split("").reverse().join("");
+        return word === reversedWord;
+      }
+
+      // Function to find and display palindromic words in a sentence
+      function findPalindromicWords(sentence) {
+        const words = sentence.split(/\s+/); // Split the sentence into words
+
+        for (const word of words) {
+          if (isPalindrome(word)) {
+            console.log(`Palindromic word: ${word}`);
+          }
+        }
+      }
+
+      // Input sentence from the user
+      const sentence = prompt("Enter a sentence:");
+
+      // Check if the input is not empty
+      if (sentence) {
+        findPalindromicWords(sentence);
+      } else {
+        console.log("Please enter a sentence.");
+      }
+    </script>
+  </body>
+</html>
