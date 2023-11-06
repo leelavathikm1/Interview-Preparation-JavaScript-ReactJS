@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- formula:
+
+BMI = weight (kg) / (height (m) * height (m)) -->
+    <script>
+      function calculateBMI(weightInKg, heightInMeters) {
+        const bmi = weightInKg / (heightInMeters * heightInMeters);
+        return bmi;
+      }
+
+      // Example usage:
+      const weight = 70; // in kilograms
+      const height = 1.75; // in meters
+      const bmi = calculateBMI(weight, height);
+      console.log("Your BMI is:", bmi);
+    </script>
+
+    <!-- We define a function calculateBMI that takes weightInKg (weight in kilograms) and heightInMeters (height in meters) as parameters.
+
+Inside the function, we calculate the BMI using the formula provided and store it in the bmi variable.
+
+The function returns the calculated BMI.
+
+You can adjust the weight and height variables in the example usage to calculate the BMI for different individuals. -->
+  </body>
+</html>

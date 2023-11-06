@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function generateFibonacci(n, current = 0, next = 1, result = []) {
+        if (n === 0) {
+          return result;
+        }
+
+        result.push(current);
+        return generateFibonacci(n - 1, next, current + next, result);
+      }
+
+      // Example usage:
+      const numberOfTerms = 10;
+      const fibonacciSequence = generateFibonacci(numberOfTerms);
+      console.log(fibonacciSequence); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+    </script>
+
+    <!-- The generateFibonacci function uses recursion to generate the Fibonacci sequence.
+
+The function takes four parameters:
+
+n: The number of terms to generate.
+current: The current term in the sequence.
+next: The next term in the sequence.
+result: An array to store the generated sequence.
+The base case is when n reaches 0, at which point the function returns the result array.
+
+In each recursive call, the function appends the current term to the result array and then calls itself with n decremented by 1, next as the new current, and current + next as the new next.
+
+This approach generates the Fibonacci sequence without explicit loops or conditions, relying on recursion to calculate the sequence. -->
+  </body>
+</html>

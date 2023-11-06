@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Count Vowels:
+   - Create a function that counts the number of vowels in a given string.  -->
+    <script>
+      function countVowels(str) {
+        const vowelMatches = str.toLowerCase().split(/[^aeiou]/);
+        const filteredVowels = vowelMatches.filter((vowel) => vowel.length > 0);
+        return filteredVowels.length;
+      }
+
+      // Example usage:
+      console.log(countVowels("Hello, World!")); // Output: 3 (e, o, o are vowels)
+      console.log(countVowels("This is a test")); // Output: 4 (i, i, a, e are vowels)
+    </script>
+    <!-- We first convert the input string to lowercase to ensure case insensitivity.
+We use the split() method with a regular expression /[^aeiou]/ to split the string into an array of non-vowel sequences.
+We then use the filter() method to remove any empty strings from the array, which represent non-vowel characters.
+Finally, we return the length of the filtered array, which represents the count of vowels in the string. -->
+  </body>
+</html>

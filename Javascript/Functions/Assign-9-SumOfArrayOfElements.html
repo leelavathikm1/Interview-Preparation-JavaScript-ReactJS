@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- array using the Array.prototype.reduce() method. Here's an example: -->
+    <script>
+      function sumArrayElements(arr) {
+        const sum = arr.reduce(
+          (accumulator, currentValue) => accumulator + currentValue,
+          0
+        );
+        return sum;
+      }
+
+      // Example usage:
+      const numbers = [1, 2, 3, 4, 5];
+      console.log(sumArrayElements(numbers)); // Output: 15 (1 + 2 + 3 + 4 + 5 = 15)
+    </script>
+    <!-- arr.reduce() is used to iterate through the array and accumulate the sum of its elements.
+The callback function (accumulator, currentValue) => accumulator + currentValue is used to add each element to the accumulator, starting with an initial value of 0. -->
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function areAnagrams(str1, str2) {
+        // Helper function to clean and sort a string
+        function cleanAndSort(str) {
+          return str.replace(/\s/g, "").toLowerCase().split("").sort().join("");
+        }
+
+        const cleanStr1 = cleanAndSort(str1);
+        const cleanStr2 = cleanAndSort(str2);
+
+        return cleanStr1 === cleanStr2;
+      }
+
+      // Example usage:
+      console.log(areAnagrams("listen", "silent")); // Output: true
+      console.log(areAnagrams("Hello", "World")); // Output: false
+      console.log(areAnagrams("Astronomer", "Moon starer")); // Output: true
+    </script>
+    <!-- The cleanAndSort helper function is used to clean and sort a string. It removes spaces, converts characters to lowercase, splits the string into an array of characters, sorts them, and then joins them back into a string.
+
+Both input strings str1 and str2 are cleaned and sorted using the cleanAndSort function.
+
+Finally, the function checks if the cleaned and sorted strings are equal. If they are equal, the two strings are anagrams, and it returns true; otherwise, it returns false. -->
+  </body>
+</html>

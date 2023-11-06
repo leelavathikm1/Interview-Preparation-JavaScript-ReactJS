@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- an array by using the Array.prototype.reduce() method. -->
+    <script>
+      function countOccurrences(arr, elementToCount) {
+        return arr.reduce((count, currentElement) => {
+          return currentElement === elementToCount ? count + 1 : count;
+        }, 0);
+      }
+
+      // Example usage:
+      const numbers = [1, 2, 2, 3, 2, 4, 2, 5];
+      const count = countOccurrences(numbers, 2);
+      console.log(`The element 2 appears ${count} times.`);
+    </script>
+
+    <!-- We define the countOccurrences function, which takes an array arr and an elementToCount as parameters.
+
+Inside the reduce() method, we compare each element in the array (currentElement) to the elementToCount using a ternary operator. If they are equal, we increment the count by 1; otherwise, we leave it unchanged.
+
+The reduce() method accumulates the count of occurrences and returns the final count. -->
+  </body>
+</html>

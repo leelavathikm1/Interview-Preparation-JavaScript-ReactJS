@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Tax Amount = Income * Tax Rate
+      function calculateTax(income, taxRate) {
+        if (income < 0 || taxRate < 0) {
+          return "Invalid input"; // Handle invalid inputs
+        }
+
+        const taxAmount = income * (taxRate / 100);
+        return taxAmount;
+      }
+
+      // Example usage:
+      const income = 50000; // Income in dollars
+      const taxRate = 20; // Tax rate as a percentage (20%)
+      const taxAmount = calculateTax(income, taxRate);
+      console.log(`Tax amount: $${taxAmount.toFixed(2)}`);
+    </script>
+
+    <!-- We define the calculateTax function, which takes income (income amount in dollars) and taxRate (tax rate as a percentage) as parameters.
+
+We check if income and taxRate are non-negative. If either of them is negative, we return an error message.
+
+We calculate the tax amount by multiplying income by the taxRate (converted to a decimal by dividing by 100).
+
+Finally, we return the calculated tax amount. -->
+  </body>
+</html>

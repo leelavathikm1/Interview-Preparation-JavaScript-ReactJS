@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Step-1
+    remove duplicate elements from an array using the Set data structure, which automatically enforces uniqueness. -->
+    <script>
+      function removeDuplicates(arr) {
+        return [...new Set(arr)];
+      }
+
+      // Example usage:
+      const arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
+      const arrayWithoutDuplicates = removeDuplicates(arrayWithDuplicates);
+      console.log(arrayWithoutDuplicates); // Output: [1, 2, 3, 4, 5]
+    </script>
+
+    <!-- We define the removeDuplicates function, which takes an array arr as its parameter.
+
+Inside the function, we create a new Set from the input array using new Set(arr). The Set automatically eliminates duplicate values because it only allows unique values.
+
+We use the spread operator ([...]) to convert the Set back into an array, preserving the order of the unique elements.
+
+Finally, we return the array without duplicates. -->
+
+    <!-- Step-2
+use JavaScript array methods in a functional style to achieve this. Here's an example using filter and indexOf: -->
+
+    <script>
+      function removeDuplicates(arr) {
+        return arr.filter(
+          (value, index, self) => self.indexOf(value) === index
+        );
+      }
+
+      // Example usage:
+      const arrayWithDuplicates1 = [1, 2, 2, 3, 4, 4, 5];
+      const arrayWithoutDuplicates1 = removeDuplicates(arrayWithDuplicates1);
+      console.log(arrayWithoutDuplicates); // Output: [1, 2, 3, 4, 5]
+    </script>
+    <!-- We define the removeDuplicates function, which takes an array arr as its parameter.
+
+Inside the filter function, we use the indexOf method to check if the current element (value) is the first occurrence of that value in the array (self). If it is, the element is kept; otherwise, it is filtered out.
+
+The filter function effectively removes duplicates while preserving the order of the unique elements. -->
+  </body>
+</html>

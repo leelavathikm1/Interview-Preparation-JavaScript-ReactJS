@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- using the split() and map() functions to process each word individually -->
+    <script>
+      function titleCase(sentence) {
+        const words = sentence.split(" ");
+
+        const titleCasedWords = words.map((word) => {
+          return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        });
+
+        return titleCasedWords.join(" ");
+      }
+
+      // Example usage:
+      const sentence = "this is a sample sentence.";
+      const titleCasedSentence = titleCase(sentence);
+      console.log(titleCasedSentence); // Output: "This Is A Sample Sentence."
+    </script>
+
+    <!-- We split the input sentence into an array of words using split(' ').
+
+We use the map() function to iterate through each word in the array and capitalize the first letter using charAt(0).toUpperCase(), and make the rest of the word lowercase using slice(1).toLowerCase().
+
+Finally, we join the title-cased words back together into a sentence using join(' '). -->
+  </body>
+</html>

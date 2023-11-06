@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function arabicToRoman(arabicNumeral) {
+        const romanSymbols = [
+          "M",
+          "CM",
+          "D",
+          "CD",
+          "C",
+          "XC",
+          "L",
+          "XL",
+          "X",
+          "IX",
+          "V",
+          "IV",
+          "I",
+        ];
+        const arabicValues = [
+          1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1,
+        ];
+
+        let romanNumeral = "";
+        let index = 0;
+
+        while (arabicNumeral > 0) {
+          if (arabicNumeral >= arabicValues[index]) {
+            romanNumeral += romanSymbols[index];
+            arabicNumeral -= arabicValues[index];
+          } else {
+            index++;
+          }
+        }
+
+        return romanNumeral;
+      }
+
+      // Example usage:
+      console.log(arabicToRoman(3549)); // Output: "MMMDXLIX"
+      console.log(arabicToRoman(1994)); // Output: "MCMXCIV"
+    </script>
+    <!-- We define two arrays, romanSymbols and arabicValues, which store the Roman numeral symbols and their corresponding Arabic values.
+
+We initialize an empty romanNumeral string to build the Roman numeral result and set the index variable to 0 to iterate through the arrays.
+
+We use a while loop to continuously subtract the largest possible Arabic value from the input arabicNumeral and add the corresponding Roman symbol to the result until arabicNumeral becomes 0.
+
+This implementation doesn't use explicit if conditions but achieves the same result by iterating through the arrays of symbols and values. -->
+  </body>
+</html>

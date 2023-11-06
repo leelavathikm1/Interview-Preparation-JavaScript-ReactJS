@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Step-1
+      function getNthElement(arr, n) {
+        if (n < 0 || n >= arr.length) {
+          return undefined; // Return undefined for out-of-bounds access
+        }
+        return arr[n];
+      }
+
+      // Example usage:
+      const myArray = [1, 2, 3, 4, 5];
+      console.log(getNthElement(myArray, 2)); // Output: 3 (Index 2, which is the 3rd element)
+      console.log(getNthElement(myArray, 6)); // Output: undefined (Out-of-bounds access)
+    </script>
+
+    <!-- Step-2 -->
+    <script>
+      function getNthElement(arr, n, currentIndex = 0) {
+        return currentIndex === n
+          ? arr[currentIndex]
+          : getNthElement(arr, n, currentIndex + 1);
+      }
+
+      // Example usage:
+      const myArray1 = [1, 2, 3, 4, 5];
+      console.log(getNthElement(myArray1, 2)); // Output: 3 (Index 2, which is the 3rd element)
+    </script>
+    <!-- The getNthElement function uses recursion to find the Nth element in the array.
+It compares the currentIndex to n. If they are equal, it returns the element at that index; otherwise, it calls itself with currentIndex incremented by 1. -->
+  </body>
+</html>

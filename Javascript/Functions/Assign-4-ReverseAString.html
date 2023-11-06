@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Step-1
+      //Array method
+      function reverseString(str) {
+        return Array.from(str).reverse().join("");
+      }
+
+      // Example usage:
+      console.log(reverseString("Hello")); // Output: "olleH"
+      console.log(reverseString("12345")); // Output: "54321"
+
+      //Step-2
+      function reverseString(str) {
+        return str
+          .split("")
+          .reduceRight((accumulator, current) => accumulator + current, "");
+      }
+
+      // Example usage:
+      console.log(reverseString("Hello")); // Output: "olleH"
+      console.log(reverseString("12345")); // Output: "54321"
+    </script>
+  </body>
+</html>

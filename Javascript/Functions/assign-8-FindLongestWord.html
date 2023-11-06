@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function findLongestWord(sentence) {
+        const words = sentence.split(" ");
+
+        // Helper function to find the longest word using recursion
+        function findLongest(arr, currentLongest) {
+          if (arr.length === 0) {
+            return currentLongest;
+          }
+
+          const word = arr.pop();
+
+          return findLongest(
+            arr,
+            word.length > currentLongest.length ? word : currentLongest
+          );
+        }
+
+        return findLongest(words, "");
+      }
+
+      // Example usage:
+      console.log(
+        findLongestWord("This is a sample sentence with some really long words")
+      ); // Output: "sentence"
+      console.log(findLongestWord("The quick brown fox")); // Output: "quick"
+    </script>
+
+    <!-- The findLongestWord function splits the input sentence into an array of words using split(' ').
+
+The findLongest helper function is used to find the longest word using recursion. It pops words from the array one by one and compares their length to the current longest word. It continues this process until all words have been checked.
+
+The result is the longest word found during the recursion. -->
+  </body>
+</html>

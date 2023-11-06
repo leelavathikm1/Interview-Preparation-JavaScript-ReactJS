@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isPalindrome(str) {
+        // Helper function to remove non-alphanumeric characters and convert to lowercase
+        function cleanString(s) {
+          return s.replace(/[^a-z0-9]/gi, "").toLowerCase();
+        }
+
+        // Helper function to check if a string is a palindrome using recursion
+        function checkPalindrome(s) {
+          if (s.length <= 1) {
+            return true;
+          } else if (s[0] === s[s.length - 1]) {
+            return checkPalindrome(s.slice(1, -1));
+          } else {
+            return false;
+          }
+        }
+
+        const cleanedStr = cleanString(str);
+        return checkPalindrome(cleanedStr);
+      }
+
+      // Example usage:
+      console.log(isPalindrome("A man, a plan, a canal, Panama")); // Output: true
+      console.log(isPalindrome("racecar")); // Output: true
+      console.log(isPalindrome("hello")); // Output: false
+    </script>
+  </body>
+</html>

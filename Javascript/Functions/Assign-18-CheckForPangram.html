@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isPangram(sentence) {
+        const alphabet = "abcdefghijklmnopqrstuvwxyz";
+        const uniqueChars = new Set();
+
+        // Convert the sentence to lowercase and filter out non-alphabet characters
+        const cleanSentence = sentence.toLowerCase().replace(/[^a-z]/g, "");
+
+        for (const char of cleanSentence) {
+          uniqueChars.add(char);
+        }
+
+        return uniqueChars.size === alphabet.length;
+      }
+
+      // Example usage:
+      const sentence1 = "The quick brown fox jumps over the lazy dog";
+      const sentence2 = "Hello, World!";
+      console.log(isPangram(sentence1)); // Output: true
+      console.log(isPangram(sentence2)); // Output: false
+    </script>
+    <!-- We define the isPangram function, which takes a sentence as input.
+
+We initialize alphabet with all lowercase letters of the English alphabet and create an empty set uniqueChars to store unique characters found in the sentence.
+
+We clean the sentence by converting it to lowercase and removing non-alphabet characters using a regular expression.
+
+We iterate through the cleaned sentence, adding each character to the uniqueChars set.
+
+Finally, we check if the size of the uniqueChars set is equal to the length of the alphabet. If it is, the sentence is a pangram, and the function returns true; otherwise, it returns false. -->
+  </body>
+</html>
