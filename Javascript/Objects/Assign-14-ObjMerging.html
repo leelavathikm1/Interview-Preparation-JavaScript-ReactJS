@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var person1 = {
+        name: "Leela",
+        age: 40,
+        address: {
+          street: "Hanuman Street",
+          city: "Chittoor",
+        },
+      };
+
+      var person2 = {
+        name: "Murali",
+        address: {
+          city: "BLR",
+          state: "Karnataka",
+        },
+      };
+
+      var mergedPerson = {
+        ...person1,
+        address: { ...person1.address, ...person2.address },
+      };
+      console.log("Merged Person Object");
+      console.log(mergedPerson);
+    </script>
+  </body>
+</html>

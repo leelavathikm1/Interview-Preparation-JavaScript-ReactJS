@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var person = {
+        name: "Leela",
+        age: 40,
+        city: "BLR",
+        address: {
+          plase: "Chittoor",
+          pincode: 560066,
+        },
+      };
+      // Modifying nested object properties
+      person.address.pincode = "57022";
+
+      console.log(person.name, person.age);
+      console.log(person.address.plase, person.address.pincode);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Create an array of person objects
+      var people = [
+        { name: "John Doe", age: 30, city: "New York" },
+        { name: "Jane Smith", age: 25, city: "Los Angeles" },
+        { name: "Bob Johnson", age: 35, city: "Chicago" },
+        { name: "Alice Brown", age: 28, city: "San Francisco" },
+      ];
+
+      // Sorting the array of people by age
+      var sortedByAge = people.slice().sort(function (a, b) {
+        return a.age - b.age;
+      });
+
+      // Filtering the array to get people from New York
+      var newYorkResidents = people.filter(function (person) {
+        return person.city === "New York";
+      });
+
+      // Display the sorted and filtered arrays
+      console.log("People sorted by age:");
+      console.log(sortedByAge);
+
+      console.log("People from New York:");
+      console.log(newYorkResidents);
+    </script>
+  </body>
+</html>

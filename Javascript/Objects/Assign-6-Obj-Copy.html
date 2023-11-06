@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var originalObj = {
+        name: "Leela",
+        age: 40,
+        city: "CTR",
+      };
+
+      var copiedObj1 = { ...originalObj };
+      var copiedObj2 = Object.assign({}, originalObj);
+
+      originalObj.age = 43;
+      originalObj.city = "BLR";
+
+      console.log("Copied Object 1 " + copiedObj1);
+      console.log("Copied Object 2 " + copiedObj2);
+    </script>
+  </body>
+</html>

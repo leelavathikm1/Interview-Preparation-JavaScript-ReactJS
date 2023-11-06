@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // create an Object
+      var person = {
+        name: "Leela",
+        age: 40,
+        city: "BLR",
+      };
+      console.log(person.name, person.age, person.city);
+      person.age = 43;
+      person.city = "CTR";
+      person.plase = "Chittoor";
+      person["pincode"] = 560066;
+
+      console.log(person.age);
+      console.log(person.city, person.plase, person.pincode);
+      for (a in person) {
+        console.log(person[a]);
+      }
+    </script>
+  </body>
+</html>
